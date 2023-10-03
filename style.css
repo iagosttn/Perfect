@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+}
+
+.container {
+    background-image: url('image/core.png') ;
+    animation-name: example; 
+    animation-duration: 4s;
+    background-position: center;
+    background-size: contain ;
+    background-repeat: no-repeat;
+    background-clip: border-box;
+    position: relative;
+    display: flex ;
+    align-items: center;
+    justify-content: center;
+    height: 600px;
+    animation-iteration-count: infinite;
+}
+.text {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-bottom: 20%;
+    transform: translateX(-50%);
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.letters {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+
+.letter {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #fff;
+    opacity: 0;
+    animation: fade 1.5s ease-in-out infinite
+}
+
+#bye{
+    position: relative;
+    top: 200px;
+}
+@keyframes fade {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@keyframes lors {
+    from {background-color: red;}
+    to {background-color: rgb(239, 111, 243);}
+}
+@keyframes example {
+    from {
+        transform: scale(2);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 719px) {
+    .container {
+    height: 500px;
+    }
+    .letters {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    }
+    .letter {
+    font-size: 3rem;
+    }
+    #bye {
+    top: 100px;
+    }
+    }
