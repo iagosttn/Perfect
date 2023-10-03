@@ -6,6 +6,7 @@
 
 body{
     height: 100vh;
+    background-color:blueviolet;
 }
 
 .container {
@@ -20,7 +21,7 @@ body{
     display: flex ;
     align-items: center;
     justify-content: center;
-    height: 600px;
+    height: 900px;
     animation-iteration-count: infinite;
 }
 .text {
@@ -46,14 +47,23 @@ body{
 .letter {
     font-size: 5rem;
     font-weight: bold;
+    margin: 0px 0px 0px 0px;
     color: #fff;
     opacity: 0;
-    animation: fade 1.5s ease-in-out infinite
+    animation: fade 4.5s ease-in-out infinite
 }
 
 #bye{
     position: relative;
-    top: 200px;
+    top: 100px;
+}
+
+.text{
+    display: flex;
+    top: 199px;
+    flex-direction: column;
+    color: aliceblue;
+    font-size: 20px;
 }
 @keyframes fade {
     from {
